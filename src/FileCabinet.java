@@ -24,11 +24,11 @@ public class FileCabinet implements Cabinet {
     @Override
     public List<Folder> findFoldersBySize(String size) {
 
-        folders.stream()
-                .filter(folder -> folder.getSize() == size)
+        List<Folder> foldersBySize = folders.stream()
+                .filter(folder -> folder.getSize().equals(size))
                 .collect(Collectors.toList());
 
-        return folders;
+        return foldersBySize;
     }
 
     @Override
