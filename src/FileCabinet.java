@@ -13,7 +13,7 @@ public class FileCabinet implements Cabinet {
         Folder retriveFolderByName = null;
 
         for (Folder folder : folders) {
-            if (folder.getName() == name){
+            if (folder.getName().equals(name)){
                 retriveFolderByName = folder;
             }
         }
